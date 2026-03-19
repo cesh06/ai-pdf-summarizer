@@ -8,11 +8,16 @@ API_KEY = st.secrets["API_KEY"]
 genai.configure(api_key=API_KEY)
 
 st.set_page_config(page_title="AI PDF Summarizer", page_icon="🤖")
+
+# Improved, readable CSS – light background with dark text
 st.markdown("""
 <style>
-    .stApp { background-color: #f0f2f6; }
+    .stApp { background-color: #fafafa; }
+    h1, h2, h3, h4, h5, h6, p, .stMarkdown { color: #111111 !important; }
     .stButton>button { background-color: #4CAF50; color: white; border-radius: 8px; }
-    .stTextInput>div>div>input { border-radius: 10px; }
+    .stTextInput>div>div>input { border-radius: 10px; background-color: white; color: black; }
+    .stSelectbox label, .stFileUploader label { color: #111111; }
+    .stProgress > div > div { background-color: #4CAF50; }
 </style>
 """, unsafe_allow_html=True)
 
